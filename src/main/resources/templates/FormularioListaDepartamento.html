@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Clientes</title>
+</head>
+<body>
+	<h1>Lista de Clientes de Ayacucho</h1>
+    <table border="3" style="border-radius: 24px; background-color: aquamarine;">
+        <thead>
+            <tr>
+                <th>CODIGO</th>
+                <th>APELLIDOS</th>
+                <th>NOMBRES</th>
+                <th>DEPARTAMENTO</th>
+                <th>DIRECCION</th>
+                <th>CELULAR</th>
+                <th>CORREO</th>
+            </tr>
+        </thead>
+        <tbody>
+    		<tr th:each="cliente : ${ListaD}">
+        	<td th:text="${cliente.codigo}"></td>
+        	<td th:text="${cliente.apellidos}"></td>
+        	<td th:text="${cliente.nombres}"></td>
+        	<td th:text="${cliente.departamento}"></td>
+        	<td th:text="${cliente.direccion}"></td>
+        	<td th:text="${cliente.celular}"></td>
+        	<td th:text="${cliente.correo}"></td>
+    		</tr>
+		</tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Registro</title>
+</head>
+<body>
+	<h1>REGISTRAR CLIENTES</h1>
+    <form th:action="@{/registrar}" th:object="${cliente}" method="post">
+        <label>Código: <input type="text" th:name="codigo" /></label>
+        <br>
+        <br>
+        <label>Apellidos: <input type="text" th:name="apellidos" /></label>
+        <br>
+        <br>
+        <label>Nombres: <input type="text" th:name="nombres" /></label>
+        <br>
+        <br>
+        <label>Departamento: <input type="text" th:name="departamento" /></label>
+        <br>
+        <br>
+        <label>Dirección: <input type="text" th:name="direccion" /></label>
+        <br>
+        <br>
+        <label>Celular: <input type="text" th:name="celular" /></label>
+        <br>
+        <br>
+        <label>Correo: <input type="email" th:name="correo" /></label>
+        <br>
+        <br>
+        <button type="submit">Registrar Cliente</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Todos los Clientes</title>
+</head>
+<body>
+	<h1>Lista de Clientes</h1>
+	<table border="3" style="border-radius: 24px; background-color: aquamarine;">
+		<thead>
+			<tr>
+				<th>CODIGO</th>
+				<th>APELLIDOS</th>
+				<th>NOMBRES</th>
+				<th>DEPARTAMENTO</th>
+				<th>DIRECCION</th>
+				<th>CELULAR</th>
+				<th>CORREO</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="objCLI: ${ListaA}">
+			<td th:text="${objCLI.codigo}"></td>
+			<td th:text="${objCLI.apellidos}"></td>
+			<td th:text="${objCLI.nombres}"></td>
+			<td th:text="${objCLI.departamento}"></td>
+			<td th:text="${objCLI.direccion}"></td>
+			<td th:text="${objCLI.celular}"></td>
+			<td th:text="${objCLI.correo}"></td>
+		</tbody>
+	</table>
+</body>
+</html>
